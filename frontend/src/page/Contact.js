@@ -100,35 +100,35 @@ const Contact = () => {
             </div>
 
             {/* form begins */}
-            <div className="p-4 py-6 rounded-lg md:p-8" style={{ border: '2px solid black' }}>
+            <div className="p-4 py-6 rounded-lg md:p-8" >
               <form ref={form} encType='multipart/form-data' method="post" onSubmit={formSubmit}>
                 <div className="-mx-2 md:items-center md:flex">
                   <div className="flex-1 px-2">
-                    <label className="block mb-2 text-sm text-black dark:text-black  text-semibold ">First Name</label>
-                    <input name='firstName' id='firstName' type="text" placeholder="First name " className="block w-full px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-200 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-600 dark:text-black dark:border-gray-700 focus:border-orange-600 dark:focus:border-orange-600 focus:ring-orange-600 focus:outline-none focus:ring focus:ring-opacity-40" />
+                    <label className="block mb-2 text-sm text-black dark:text-white font-lg font-semibold ">First Name</label>
+                    <input name='firstName' id='firstName' type="text" placeholder="First name " className="block w-full px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-200 bg-white border border-black rounded-lg dark:placeholder-gray-600 dark:text-black dark:border-black dark:border-2 focus:border-orange-600 dark:focus:border-orange-600 focus:ring-orange-600 focus:outline-none focus:ring focus:ring-opacity-40" />
                   </div>
 
                   <div className="flex-1 px-2 mt-4 md:mt-0">
-                    <label className="block mb-2 text-sm text-black dark:text-black  text-semibold ">Last Name</label>
-                    <input name='lastName' id='lastName' type="text" placeholder="Last name" className="block w-full px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-200 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-600 dark:text-black dark:border-gray-700 focus:border-orange-600 dark:focus:border-orange-600 focus:ring-orange-600 focus:outline-none focus:ring focus:ring-opacity-40" />
+                    <label className="block mb-2 text-sm text-black dark:text-white font-lg font-semibold ">Last Name</label>
+                    <input name='lastName' id='lastName' type="text" placeholder="Last name" className="block w-full px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-200 bg-white border border-black rounded-lg dark:placeholder-gray-600 dark:text-black dark:border-black dark:border-2 focus:border-orange-600 dark:focus:border-orange-600 focus:ring-orange-600 focus:outline-none focus:ring focus:ring-opacity-40" />
                   </div>
                 </div>
 
                 <div className="mt-4">
-                  <label className="block mb-2 text-sm text-black dark:text-black  text-semibold ">Email address</label>
-                  <input name='email' id='email' type="email" placeholder="abc@example.com" className="block w-full px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-200 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-600 dark:text-black dark:border-gray-700 focus:border-orange-600 dark:focus:border-orange-600 focus:ring-orange-600 focus:outline-none focus:ring focus:ring-opacity-40" />
+                  <label className="block mb-2 text-sm text-black dark:text-white font-lg font-semibold ">Email address</label>
+                  <input name='email' id='email' type="email" placeholder="abc@example.com" className="block w-full px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-200 bg-white border border-black rounded-lg dark:placeholder-gray-600 dark:text-black dark:border-black dark:border-2 focus:border-orange-600 dark:focus:border-orange-600 focus:ring-orange-600 focus:outline-none focus:ring focus:ring-opacity-40" />
                 </div>
 
                 <div className="mt-4">
-                  <label className="block mb-2 text-sm text-black dark:text-black  text-semibold ">Phone number</label>
-                  <input name='phoneNumber' id='phoneNumber' type="number" placeholder="1234567890" className="block w-full px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-200 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-600 dark:text-black dark:border-gray-700 focus:border-orange-600 dark:focus:border-orange-600 focus:ring-orange-600 focus:outline-none focus:ring focus:ring-opacity-40" />
+                  <label className="block mb-2 text-sm text-black dark:text-white font-lg font-semibold ">Phone number</label>
+                  <input name='phoneNumber' id='phoneNumber' type="number" placeholder="1234567890" className="block w-full px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-200 bg-white border border-black rounded-lg dark:placeholder-gray-600 dark:text-black dark:border-black dark:border-2 focus:border-orange-600 dark:focus:border-orange-600 focus:ring-orange-600 focus:outline-none focus:ring focus:ring-opacity-40" />
                 </div>
 
 
 
                 <div className="w-full mt-4">
-                  <label className="block mb-2 text-sm text-black dark:text-black  text-semibold ">Message</label>
-                  <textarea className="block w-full h-32 px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-200 bg-white border border-gray-200 rounded-lg md:h-56 dark:placeholder-gray-600 dark:text-black dark:border-gray-700 focus:border-orange-600 dark:focus:border-orange-600 focus:ring-orange-600 focus:outline-none focus:ring focus:ring-opacity-40" placeholder="Explain your query"></textarea>
+                  <label className="block mb-2 text-sm text-black dark:text-white font-lg font-semibold ">Message</label>
+                  <textarea className="block w-full h-32 px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-200 bg-white border border-black rounded-lg md:h-56 dark:placeholder-gray-600 dark:text-black -black dark:border-2 gray-700 focus:border-orange-600 dark:focus:border-orange-600 focus:ring-orange-600 focus:outline-none focus:ring focus:ring-opacity-40" placeholder="Explain your query"></textarea>
                 </div>
 
                 <button className="w-full px-6 py-3 mt-4 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-orange-600 rounded-lg hover:bg-orange-700 focus:outline-none focus:ring focus:ring-orange-600 focus:ring-opacity-50">

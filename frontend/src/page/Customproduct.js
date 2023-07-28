@@ -88,6 +88,7 @@ const Customproduct = () => {
         position: 'relative',
         borderRadius: '5px',
         overflow: 'hidden',
+        
       }}>
         <div
           style={{
@@ -96,9 +97,10 @@ const Customproduct = () => {
             left: 0,
             right: 0,
             bottom: 0,
-            backgroundColor: 'rgba(0, 0, 0, 0.3)', // Adjust the opacity as per your requirement
+            backgroundColor: 'rgba(0, 0, 0, 0.5)', // Adjust the opacity as per your requirement
             backdropFilter: 'blur(5px)', // Add the blur effect to the overlay
             borderRadius: '5px',
+            
             zIndex: 1, // Ensure the overlay is above the background image
           }}
         ></div>
@@ -106,7 +108,7 @@ const Customproduct = () => {
         <div style={{ position: 'relative', zIndex: 2 }}>
           <h3 className=" pt-4 text-center text-3xl font-semibold mb-2 text-white">Couldn't find your product?</h3>
           <h6 className="text-center text-3xl font-bold mb-4 text-white">Want a custom build?</h6>
-          <form className='m-auto w-full max-w-md drop-shadow-2xl shadow-lg rounded-lg flex flex-col p-5 bg-transparent mb-10' style={{ border: '2px solid black', borderRadius: '10' }} onSubmit={handleSubmit}>
+          <form className='m-auto  w-full max-w-md drop-shadow-2xl shadow-lg rounded-lg flex flex-col p-5 bg-transparent mb-10'onSubmit={handleSubmit}>
             <label className='font-semibold text-lg text-white' htmlFor='name'>Product name</label>
             <input type={"text"} placeholder='Enter Product name' name="name" style={{border:'2px solid black'}} className=' bg-slate-200 p-1 my-1  rounded-lg ' onChange={handleOnChange} value={data.name} />
 

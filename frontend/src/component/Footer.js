@@ -8,15 +8,15 @@ const Footer = () => {
     return (
         <div>
 
-            <footer className="bg-white dark:bg-gray-900 mt-10">
+            <footer className="bg-white dark:bg-gray-900">
                 <div className="container p-6 mx-auto">
                     <div className="lg:flex">
                         <div className="w-full -mx-6 lg:w-2/5">
                             <div className="px-6" >
-                                <Link to={"#"}>
+                                <Link to={"/"}>
                                     <div className='flex'>
                                         <img src={logo} alt='VK logo' className='h-20 w-30 ' />
-                                        <p className=' px-5 py-2 text-white text-2xl'>VK <br />Welding Works</p>
+                                        <p className=' px-5 py-2 text-white text-2xl'>V.K. <br />Welding Works</p>
                                     </div>
                                 </Link>
 
@@ -87,7 +87,7 @@ const Footer = () => {
                     <hr className="h-px my-6 bg-gray-200 border-none dark:bg-gray-700" />
 
                     <div>
-                        <p className="text-center text-gray-500 dark:text-gray-400">© Brand 2020 - All rights reserved</p>
+                        <p className="text-center text-gray-500 dark:text-gray-400">© vkWeldingWorks@2023 - All rights reserved</p>
                     </div>
                 </div>
             </footer>
