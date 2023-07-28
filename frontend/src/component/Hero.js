@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect,useMemo } from 'react';
 import { Link } from 'react-router-dom';
 
 import heroBG2 from '../assets/heroBG2.jpg';
@@ -7,7 +7,17 @@ import heroBG4 from '../assets/heroBG4.jpg';
 import heroBG5 from '../assets/heroBG5.jpg';
 
 const Hero = () => {
-  const images = [heroBG2, heroBG3, heroBG4, heroBG5];
+    
+  
+  // Wrap the initialization of 'images' in useMemo hook
+  const images = useMemo(() => [
+    heroBG2,
+    heroBG3,
+    heroBG4,
+    heroBG5
+    // Add more images here
+  ], []);
+  // const images = [heroBG2, heroBG3, heroBG4, heroBG5];
   const [currentImage, setCurrentImage] = useState(0);
   const [loading, setLoading] = useState(true);
   const [isHovered, setIsHovered] = useState(false);
@@ -75,18 +85,7 @@ const Hero = () => {
         >
           {loading && <div>Loading...</div>}
 
-          <div
-            style={{
-              content: '""',
-              position: 'absolute',
-              top: '-20px',
-              left: '-20px',
-              right: '-20px',
-              bottom: '-20px',
-              boxShadow: 'inset 0 0 20px 20px rgba(0, 0, 0, 0.3)', // Add the blur effect here
-              zIndex: 2,
-            }}
-          ></div>
+
 
 
           <div className="relative z-10 text-center"> {/* Add z-10 class to control the text's z-index */}
@@ -94,7 +93,7 @@ const Hero = () => {
               <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl pb-5 font-semibold text-gray-800 dark:text-white">
                 Build Your New <span className="text-orange-600 dark:text-orange-600">IDEA</span>
               </h2>
-              <p className="mt-4 text-base sm:text-lg md:text-xl text-white font-medium dark:text-grey-400 px-4 sm:px-8 md:px-16 lg:px-24 xl:px-40">
+              <p className="mt-4 text-base sm:text-lg md:text-xl text-white font-medium dark:text-grey-400 px-4 sm:px-8 md:px-10 lg:px-10 xl:px-0">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis commodi cum cupiditate ducimus, fugit
                 harum id necessitatibus odio quam quasi, quibusdam rem tempora voluptates.
               </p>
