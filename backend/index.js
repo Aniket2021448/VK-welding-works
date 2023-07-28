@@ -141,7 +141,7 @@ app.get("/products", async(req, res)=>{
   const data = await customProductModel.find({})
   res.send(JSON.stringify(data))
 
-  // console.log("data")
+  console.log("data")
 })
 
 
