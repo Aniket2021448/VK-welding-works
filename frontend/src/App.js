@@ -11,7 +11,7 @@ function App() {
   
   useEffect(()=>{
     (async()=>{
-      const res = await fetch( `${process.env.REACT_APP_SERVER_DOMAIN}/products`)
+      const res = await fetch( `https://vkweldingworksbackend.onrender.com/products`)
       const resData = await res.json()
       console.log(resData)
       dispatch(setProductData(resData))
