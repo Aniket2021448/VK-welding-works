@@ -10,7 +10,7 @@ const CompanyInfo = () => {
                 <div className="container pt-4 mx-auto bg-white sm:p-6 lg:p-8 rounded-lg bg-white"
                     style={{ maxWidth: "90%", boxShadow: "0 0 40px rgba(0, 0, 0, 0.5)" }}
                 >
-                    <div className="flex flex-wrap -mx-8">
+                    <div className="flex flex-wrap mx-auto">
                         <div className="w-full px-8 lg:w-1/2">
                             <div className="pb-12 mb-12 mx-2 border-b lg:mb-0 lg:pb-0 lg:border-b-0">
                                 <h2 className="mb-4 text-3xl font-bold lg:text-4xl font-heading text-orange-600">
@@ -31,7 +31,7 @@ const CompanyInfo = () => {
                         <div className="w-full px-8 lg:w-1/2">
                             <ul className="space-y-12">
                                 <li className="flex -mx-4">
-                                    <div className="px-4">
+                                    <div className="px-4 ">
                                         <span className="flex items-center justify-center w-16 h-16 mx-auto text-2xl font-bold text-orange-600 rounded-full font-heading bg-gray-100">
                                             1
                                         </span>

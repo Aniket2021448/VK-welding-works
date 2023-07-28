@@ -20,7 +20,7 @@ const Productcard = ({ name, image, description }) => {
                     <div className="py-5 text-center">
                         <Link to={"#"} className="block text-xl font-bold text-gray-800 dark:text-gray-900" tabIndex="0" role="link">{name}</Link>
                         <span className="text-sm text-gray-700 dark:text-gray-200">
-                        <button className='p-2 m-2 text-m font-semibold text-white uppercase transition-colors duration-300 transform bg-orange-600 rounded hover:bg-orange-500 dark:hover:bg-orange-700 focus:bg-orange-500 dark:focus:bg-orange-700 focus:outline-none'>
+                        <button className='p-2 px-6 m-2 text-m font-semibold text-white uppercase transition-colors duration-300 transform bg-orange-600 rounded hover:bg-orange-500 dark:hover:bg-orange-700 focus:bg-orange-500 dark:focus:bg-orange-700 focus:outline-none'>
                             Get Quote
                         </button>
                         </span>
