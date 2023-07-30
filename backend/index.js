@@ -3,6 +3,7 @@ const cors = require("cors") //to handle cross port requests
 const mongoose = require("mongoose");  //to manage mongo db database
 // const Customproduct = require("../frontend/src/page/Customproduct");
 const dotenv = require("dotenv").config()
+const path = require("path"); // Add this line to import the 'path' module
 
 const app = express(); //initialise express app
 app.use(cors());       //make the app use cors platform to handle cross port requests
@@ -74,6 +75,16 @@ const customProductModel = mongoose.model("customProduct", customProductSchema)
 app.get("/" , (req, res)=>{ //by default API. sending this text.
     res.send("Server is running")
 })
+
+// Serve static assets from the React client build folder
+app.use(express.static(path.join(__dirname, "client", "build")));
+
+// Serve the main index.html for all routes
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+});
+
+
 
 //sign up
 app.post("/signup", async (req, res) => {
