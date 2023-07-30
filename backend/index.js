@@ -4,6 +4,7 @@ const mongoose = require("mongoose");  //to manage mongo db database
 // const Customproduct = require("../frontend/src/page/Customproduct");
 const dotenv = require("dotenv").config()
 const path = require("path"); // Add this line to import the 'path' module
+const serve = require("serve");
 
 const app = express(); //initialise express app
 app.use(cors());       //make the app use cors platform to handle cross port requests
@@ -78,9 +79,13 @@ app.get("/" , (req, res)=>{ //by default API. sending this text.
 
 
 // Serve the main index.html for all routes
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "..", "frontend", "build", "index.html"));
-});
+// app.get("*", (req, res) => {
+//   res.sendFile(path.join(__dirname, "..", "frontend", "build", "index.html"));
+// });
+
+serve(path.join(__dirname, "../frontend/build"));
+
+
 
 //sign up
 app.post("/signup", async (req, res) => {
