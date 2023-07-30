@@ -79,11 +79,9 @@ app.get("/" , (req, res)=>{ //by default API. sending this text.
 // Serve static assets from the React client build folder
 app.use(express.static(path.join(__dirname, "../frontend/build")));
 
-// Serve the main index.html for all routes
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+  res.sendFile(path.join(__dirname, "../frontend/build", "index.html"));
 });
-
 
 
 //sign up
