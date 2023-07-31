@@ -17,7 +17,7 @@ mongoose.set("strictQuery", false);
 mongoose
   .connect(process.env.MONGO_URI)
   .then(() => console.log("Connected to mongoDB"))
-  .catch((err) => console.log(err));
+  .catch((err) => res.status(500).json({error: err.message}))
 
 //user Schema
 const userSchema = mongoose.Schema({
@@ -85,7 +85,7 @@ app.get("/", (req, res) => {
 
 //sign up
 app.post("/signup", async (req, res) => {
-  console.log(req.body);
+  // console.log(req.body);
   const { email } = req.body;
 
   try {
@@ -98,7 +98,7 @@ app.post("/signup", async (req, res) => {
       res.send({ message: "Successfully signed up", alert: true });
     }
   } catch (err) {
-    console.log(err);
+    // console.log(err);
     res.status(500).send({ message: "Internal server error" });
   }
 });
@@ -107,7 +107,7 @@ app.post("/signup", async (req, res) => {
 
 // custom product API
 app.post("/customproduct", async(req, res)=>{
-  console.log(req.body)
+  // console.log(req.body)
   const data = await customProductModel(req.body)
   const saveData = await data.save()
   res.send({message:"Request sent successully"})
@@ -120,7 +120,7 @@ app.get("/products", async(req, res)=>{
   const data = await customProductModel.find({})
   res.send(JSON.stringify(data))
 
-  console.log("data")
+  // console.log("data")
 })
 
 
