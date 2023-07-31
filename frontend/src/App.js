@@ -9,15 +9,22 @@ function App() {
   const dispatch = useDispatch()
   const productData = useSelector((state) =>state.product)
   
-  useEffect(()=>{
-    (async()=>{
-      const res = await fetch( `https://vkweldingworksbackend.onrender.com/products`)
-      const resData = await res.json()
-      console.log(resData)
-      dispatch(setProductData(resData))
-    })()
-    // eslint-disable-next-line
-  }, []) 
+  useEffect(() => {
+    (async () => {
+      try {
+        const res = await fetch(`http://localhost:8080/products`);
+        if (!res.ok) {
+          throw new Error('Failed to fetch product data');
+        }
+        const resData = await res.json();
+        console.log(resData);
+        dispatch(setProductData(resData));
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    })();
+    // eslint-disable-next-line 
+  }, []);
   // , []
   
   console.log(productData)
