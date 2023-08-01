@@ -6,7 +6,7 @@ const CompanyInfo = () => {
     return (
         <div>
 
-            <section className='pt-20'>
+            <section className='pt-10'>
                 <div className="container pt-4 mx-auto bg-white sm:p-6 lg:p-8 rounded-lg bg-white"
                     style={{ maxWidth: "90%", boxShadow: "0 0 40px rgba(0, 0, 0, 0.5)" }}
                 >

@@ -53,7 +53,7 @@ const Slide = () => {
           ))}
         </Slider>
 
-        <div className='flex flex-row mt-10 pt-5 max-w-50 mx-auto justify-center '>
+        <div className='flex flex-row mt-10 pt-5 pb-10 max-w-50 mx-auto justify-center '>
           <Link to={"products"}>
             <button className="px-6 py-2 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-orange-600 rounded-lg hover:bg-orange-700 focus:outline-none focus:ring focus:ring-orange-300 focus:ring-opacity-80">
               Browse all PRODUCTS
