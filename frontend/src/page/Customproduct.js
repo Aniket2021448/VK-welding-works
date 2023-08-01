@@ -40,13 +40,13 @@ const Customproduct = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault()            //to prevent the default behaviour of loading the page
-    console.log(data)              //checking what data came on submitting
+    // console.log(data)              //checking what data came on submitting
 
     const { name, image, phoneNumber } = data //extracting the data 
 
     if (name && image && phoneNumber) { //checking in case all required fields have been submitted
       //go and post this data. 
-      console.log("REACT_APP_SERVER_DOMAIN:", "https://vkweldingworksbackend.onrender.com");
+      // console.log("REACT_APP_SERVER_DOMAIN:", "https://vkweldingworksbackend.onrender.com");
 
       const fetchData = await fetch(`https://vkweldingworksbackend.onrender.com/customproduct`, {
         method: "POST",
