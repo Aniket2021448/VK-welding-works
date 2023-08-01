@@ -46,6 +46,8 @@ const Customproduct = () => {
 
     if (name && image && phoneNumber) { //checking in case all required fields have been submitted
       //go and post this data. 
+      console.log("REACT_APP_SERVER_DOMAIN:", process.env.REACT_APP_SERVER_DOMAIN);
+
       const fetchData = await fetch(`${process.env.REACT_APP_SERVER_DOMAIN}/customproduct`, {
         method: "POST",
         headers: {
