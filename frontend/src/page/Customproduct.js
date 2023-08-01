@@ -46,7 +46,7 @@ const Customproduct = () => {
 
     if (name && image && phoneNumber) { //checking in case all required fields have been submitted
       //go and post this data. 
-      const fetchData = await fetch(`https://vkweldingworksbackend.onrender.com/customproduct`, {
+      const fetchData = await fetch(`${process.env.REACT_APP_SERVER_DOMAIN}/customproduct`, {
         method: "POST",
         headers: {
           "content-type": "application/json"
