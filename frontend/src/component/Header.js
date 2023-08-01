@@ -54,12 +54,12 @@ const Header = () => {
                 <Link to={"https://narelacity.com/b-detail.php?b=V.+K.+WELDING+WORKS&n=357&nat=INDUSTRY&cat=MANUFACTURING&ref=bdet"}
                   target='_blank'
                 >
-                  <div className={`text-slate-200 ${isOpen || isMobileView ? 'text-3xl' : 'text-3xl'} font-bold leading-right`} style={{ fontFamily: 'VintageFont', paddingBottom: '0px', paddingTop: '8px' }}>
+                  <div className={`text-slate-200 ${isOpen || isMobileView ? 'text-3xl' : 'text-3xl'} font-base leading-right`} style={{ fontFamily: 'VintageFont', paddingBottom: '0px', paddingTop: '8px' }}>
                     V.K. Welding Works
                   </div>
                 </Link>
                 <Link to={"https://goo.gl/maps/7dz3Uk3sTTX5kYmg6"} target='_blank'>
-                  <div className={`text-slate-200 ${isOpen || isMobileView ? 'text-s' : 'text-base'} flex items-center`} style={{ fontFamily: 'VintageFont' }}>
+                  <div className={`text-slate-200 ${isOpen || isMobileView ? 'text-xs' : 'text-base'} flex items-center`} style={{ fontFamily: 'VintageFont' }}>
                     <ImLocation2 className="mr-2" />
                     <div>J-2900 DSIIDC Narela Industrial area, Delhi-110040</div>
                   </div>
