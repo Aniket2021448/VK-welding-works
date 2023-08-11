@@ -55,10 +55,10 @@ const Customproduct = () => {
         },
         body: JSON.stringify(data) //to convert entered details in terms of JSON.
       })
-
+      // eslint-disable-next-line
       const fetchRes = await fetchData.json() //fetching the response sent from backend API. either success or fail
-
-      console.log(fetchRes)    //showing response
+      
+      // console.log(fetchRes)    //showing response
       toast.success("Query sent successfully !!!")
 
       setData(() => {            //in case everything is fine, then add this data 
@@ -90,7 +90,7 @@ const Customproduct = () => {
         position: 'relative',
         borderRadius: '5px',
         overflow: 'hidden',
-        
+
       }}>
         <div
           style={{
@@ -102,7 +102,7 @@ const Customproduct = () => {
             backgroundColor: 'rgba(0, 0, 0, 0.5)', // Adjust the opacity as per your requirement
             backdropFilter: 'blur(5px)', // Add the blur effect to the overlay
             borderRadius: '5px',
-            
+
             zIndex: 1, // Ensure the overlay is above the background image
           }}
         ></div>
@@ -110,13 +110,13 @@ const Customproduct = () => {
         <div style={{ position: 'relative', zIndex: 2 }}>
           <h3 className=" pt-4 text-center text-3xl font-semibold mb-2 text-white">Couldn't find your product?</h3>
           <h6 className="text-center text-3xl font-bold mb-4 text-white">Want a custom build?</h6>
-          <form className='m-auto  w-full max-w-md drop-shadow-2xl shadow-lg rounded-lg flex flex-col p-5 bg-transparent mb-10'onSubmit={handleSubmit}>
+          <form className='m-auto  w-full max-w-md drop-shadow-2xl shadow-lg rounded-lg flex flex-col p-5 bg-transparent mb-10' onSubmit={handleSubmit}>
             <label className='font-semibold text-lg text-white' htmlFor='name'>Product name</label>
-            <input type={"text"} placeholder='Enter Product name' name="name" style={{border:'2px solid black'}} className=' bg-slate-200 p-1 my-1  rounded-lg ' onChange={handleOnChange} value={data.name} />
+            <input type={"text"} placeholder='Enter Product name' name="name" style={{ border: '2px solid black' }} className=' bg-slate-200 p-1 my-1  rounded-lg ' onChange={handleOnChange} value={data.name} />
 
 
             <label className='font-semibold text-lg text-white' htmlFor='image'>Upload image of your product
-              <div className='h-40 w-full bg-slate-200 pt-4 rounded flex items-center justify-center cursor-pointer'  style={{border:'2px solid black'}} >
+              <div className='h-40 w-full bg-slate-200 pt-4 rounded flex items-center justify-center cursor-pointer' style={{ border: '2px solid black' }} >
                 {
                   data.image ? <img src={data.image} alt='' className="h-full" /> : <span className='text-5xl'><BsCloudUpload /></span>
                 }
@@ -129,13 +129,13 @@ const Customproduct = () => {
 
 
             <label className='font-semibold text-lg text-white' htmlFor='description'>Product Description</label>
-            <textarea rows={2} placeholder='Tell us something about your product' value={data.description} style={{border:'2px solid black'}} className=' bg-slate-200 p-1 my-1  rounded-lg  resize-none' name='description' onChange={handleOnChange}></textarea>
+            <textarea rows={2} placeholder='Tell us something about your product' value={data.description} style={{ border: '2px solid black' }} className=' bg-slate-200 p-1 my-1  rounded-lg  resize-none' name='description' onChange={handleOnChange}></textarea>
 
             {/* <label className='font-semibold text-lg text-white' htmlFor='price' className=''>Price</label>
         <input type={"text"} placeholder='What price are you expecting?' style={{border:'2px solid black'}} className=' bg-slate-200 p-1 my-1  rounded-lg ' name='price' onChange={handleOnChange} value={data.price}/> */}
 
             <label className='font-semibold text-lg text-white' htmlFor='phoneNumber'>Mobile number</label>
-            <input type={"number"} placeholder='We will contact you for measurement' name="phoneNumber" style={{border:'2px solid black'}} className=' bg-slate-200 p-1 my-1  rounded-lg ' onChange={handleOnChange} value={data.phoneNumber} />
+            <input type={"number"} placeholder='We will contact you for measurement' name="phoneNumber" style={{ border: '2px solid black' }} className=' bg-slate-200 p-1 my-1  rounded-lg ' onChange={handleOnChange} value={data.phoneNumber} />
 
             <button className="py-5 mt-4 bg-red-500 hover:bg-red-600  rounded-lg text-white font-bold py-2 px-4 border-b-4 border-red-700 hover:border-red-800 rounded">SUBMIT</button>
 

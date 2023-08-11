@@ -34,7 +34,7 @@ const Partners = () => {
                                 </svg>
                             </div>
                             <h5 className="mb-4 text-xl font-bold text-orange-600">Support 24/7</h5>
-                            <p className="text-white dark:text-neutral-900">
+                            <p className="text-neutral-900 dark:text-white">
                                 Laudantium totam quas cumque pariatur at doloremque hic quos quia
                                 eius. Reiciendis optio minus mollitia rerum labore
                             </p>
@@ -49,7 +49,7 @@ const Partners = () => {
                                 </svg>
                             </div>
                             <h5 className="mb-4 text-xl font-bold text-orange-600">Safe and solid</h5>
-                            <p className="text-white dark:text-neutral-900">
+                            <p className="text-neutral-900 dark:text-white">
                                 Eum nostrum fugit numquam, voluptates veniam neque quibusdam ullam
                                 aspernatur odio soluta, quisquam dolore animi
                             </p>
@@ -64,7 +64,7 @@ const Partners = () => {
                                 </svg>
                             </div>
                             <h5 className="mb-4 text-xl font-bold text-orange-600">Extremely fast</h5>
-                            <p className="text-white dark:text-neutral-900">
+                            <p className="text-neutral-900 dark:text-white">
                                 Enim cupiditate, minus nulla dolor cumque iure eveniet facere
                                 ullam beatae hic voluptatibus dolores exercitationem
                             </p>
@@ -79,7 +79,7 @@ const Partners = () => {
                                 </svg>
                             </div>
                             <h5 className="mb-4 text-xl font-bold text-orange-600">Live analytics</h5>
-                            <p className="text-white dark:text-neutral-900">
+                            <p className="text-neutral-900 dark:text-white">
                                 Illum doloremque ea, blanditiis sed dolor laborum praesentium
                                 maxime sint, consectetur atque ipsum ab adipisci
                             </p>

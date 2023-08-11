@@ -16,7 +16,7 @@ const Footer = () => {
                                 <Link to={"/"}>
                                     <div className='flex'>
                                         <img src={logo} alt='VK logo' className='h-20 w-30 ' />
-                                        <p className=' px-5 py-2 text-white text-2xl'>V.K. <br />Welding Works</p>
+                                        <p className=' px-5 py-2 text-black dark:text-white text-2xl'>V.K. <br />Welding Works</p>
                                     </div>
                                 </Link>
 

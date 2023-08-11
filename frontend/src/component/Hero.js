@@ -90,7 +90,7 @@ const Hero = () => {
 
           <div className="relative z-10 text-center"> {/* Add z-10 class to control the text's z-index */}
             <div className='mx-10 sm:mx-20 md:mx-40 lg:mx-80'>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl pb-5 font-semibold text-gray-800 dark:text-white">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl pb-5 font-semibold text-white ">
                 Build Your New <span className="text-orange-600 dark:text-orange-600">IDEA</span>
               </h2>
               <p className="mt-4 text-base sm:text-lg md:text-xl text-white font-medium dark:text-grey-400 px-4 sm:px-8 md:px-10 lg:px-10 xl:px-0">

@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from 'react-redux';
 function App() {
 
   const dispatch = useDispatch()
+  // eslint-disable-next-line
   const productData = useSelector((state) =>state.product)
   
   useEffect(() => {
@@ -17,7 +18,7 @@ function App() {
           throw new Error('Failed to fetch product data');
         }
         const resData = await res.json();
-        console.log(resData);
+        // console.log(resData);
         dispatch(setProductData(resData));
       } catch (error) {
         console.error('Error fetching data:', error);
@@ -27,7 +28,7 @@ function App() {
   }, []);
   // , []
   
-  console.log(productData)
+  // console.log(productData)
 
   return (
     <div>

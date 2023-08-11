@@ -34,7 +34,7 @@ const Slide = () => {
   };
 
   const allProducts = useSelector((state) => state.product.productList);
-  console.log(allProducts);
+  // console.log(allProducts);
 
   return (
     <div className="mx-auto" style={{"maxWidth":"90%"}}>
