@@ -2,10 +2,13 @@ import React, { useState, useEffect } from 'react';
 import logo from "../assets/logo.png";
 import { Link } from "react-router-dom";
 import { ImLocation2 } from "react-icons/im";
+import { FcCallback } from "react-icons/fc";
 // import { useDispatch } from 'react-redux';
 // import { logoutRedux } from '../redux/userSlice';
 // import { toast } from 'react-hot-toast';
 // import { Toaster } from 'react-hot-toast';
+import contactHome from "../assets/contactHome.png"
+
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -35,6 +38,18 @@ const Header = () => {
       window.removeEventListener('resize', handleWindowResize);
     };
   }, []);
+
+  const handleCall = () => {
+    const phoneNumber = '9868203590'; // Replace with your actual phone number
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    
+    if (isMobile) {
+      window.location.href = `tel:${phoneNumber}`;
+    } else {
+      // Redirect to the "Contact Us" page if call functionality is not available
+      window.location.href = '/contact';
+    }
+  };
 
   return (
     <nav className="shadow bg-gray-50 dark:bg-gray-900" >
@@ -108,7 +123,11 @@ const Header = () => {
                 Contact
               </Link>
             </div>
-
+            
+            <div className='flex flex-row rounded-3xl p-2 bg-gray-100'onClick={handleCall} style={{cursor: 'pointer'}} >  
+              <FcCallback style={{ fontSize: '40px' ,paddingRight:'5px' }} />
+                  
+              <p className='text-black p-2 text-center'> Get a call back <br/>from us </p></div>
             
           </div>
         </div>
