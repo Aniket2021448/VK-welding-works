@@ -7,7 +7,7 @@ import { FcCallback } from "react-icons/fc";
 // import { logoutRedux } from '../redux/userSlice';
 // import { toast } from 'react-hot-toast';
 // import { Toaster } from 'react-hot-toast';
-import contactHome from "../assets/contactHome.png"
+// import contactHome from "../assets/contactHome.png"
 
 
 const Header = () => {
