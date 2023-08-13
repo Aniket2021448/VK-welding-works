@@ -5,31 +5,33 @@ const CallBackButton = () => {
   const [isHovered, setIsHovered] = useState(false);
 
   const handleCall = () => {
-    const phoneNumber = '9868203590'; // Replace with your actual phone number
+    const phoneNumber = '9868203590';
     const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-
+    
     if (isMobile) {
       window.location.href = `tel:${phoneNumber}`;
     } else {
-      // Redirect to the "Contact Us" page if call functionality is not available
       window.location.href = '/contact';
     }
   };
 
   return (
-    <div className='fixed bottom-0 right-0 p-3 m-5'>
-      <div
-        className={`bg-gray-100 text-center cursor-pointer rounded-full p-3 transform transition-all ${
-          isHovered ? 'shadow-lg' : 'shadow-md'
-        }`}
-        style={{border: '2px solid black',zIndex: '9999', visibility: 'visible' }}
-        onClick={handleCall}
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
-      >
+    <div
+      className={`fixed bottom-10 right-10 cursor-pointer bg-gray-100 rounded-full shadow-lg hover:shadow-xl transition-transform duration-500 transform ${isHovered ? 'hovered' : ''}`}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      style={{ zIndex: 9999, visibility: 'visible', border: '2px solid black' }}
+      onClick={handleCall}
+    >
+      <div className="flex flex-col items-center text-center bg-white rounded-full p-3">
         <FcCallback style={{ fontSize: '50px' }} />
+        
+        {isHovered && (
+          <div className="mt-2 -mb-2 bg-white rounded p-1 text-xs font-semibold">
+            Get a Call Back
+          </div>
+        )}
       </div>
-
     </div>
   );
 };
