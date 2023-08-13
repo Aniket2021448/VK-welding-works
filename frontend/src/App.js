@@ -4,6 +4,8 @@ import { Outlet } from 'react-router-dom';
 import Footer from './component/Footer';
 import { setProductData } from './redux/productSlice';
 import { useDispatch, useSelector } from 'react-redux';
+import CallBackButton from './component/Callback'; // Import the CallBackButton component
+
 function App() {
 
   const dispatch = useDispatch()
@@ -38,6 +40,7 @@ function App() {
         </main>
           
       <Footer />
+      <CallBackButton/>
     </div>
   );
 }
