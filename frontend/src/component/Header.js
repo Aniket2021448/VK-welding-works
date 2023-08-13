@@ -126,9 +126,7 @@ const Header = () => {
             
             <div className='flex flex-row rounded-3xl p-2 bg-gray-100' onClick={handleCall} style={{cursor: 'pointer'}} >  
               <FcCallback style={{ fontSize: '40px' ,paddingRight:'4px' }} />
-                  
               <p className='text-black text-center'> Get a call back <br/>from us </p></div>
-            
           </div>
         </div>
       </div>
